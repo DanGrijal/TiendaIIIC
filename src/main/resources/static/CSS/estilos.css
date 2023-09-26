@@ -1,0 +1,61 @@
+/* 
+    Created on : 19 sept 2023, 19:27:58
+    Author     : danny
+*/
+#encabezados {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+#tituloPrincipal{
+    color: aquamarine;
+}
+
+.parrafosCentrados {
+    text-align: center;
+    font-weight: bolder;
+    color: #ffcc33;
+}
+
+.textoVerdoso{
+    color: #ccff66;
+}
+
+/* Selector universal
+* {
+    color: wheat;
+}*/
+
+/*Selector de elementos
+p, h1, span {
+    color: #6666ff;
+}
+*/
+
+a:link{
+    background-color: greenyellow;
+    color:antiquewhite;
+}
+
+a:visited{
+    background-color: pink;
+    color:antiquewhite
+}
+
+a:hover{
+    background-color: coral;
+    color:antiquewhite;
+}
+
+a:active{
+    background-color: #00cccc;
+    color:antiquewhite;
+}
+
+p:nth-child(odd){
+    background-color: darksalmon;
+}
+
+p:nth-child(even){
+    background-color: cadetblue;
+}

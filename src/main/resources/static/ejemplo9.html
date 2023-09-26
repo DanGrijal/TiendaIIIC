@@ -3,21 +3,28 @@
     <head>
         <title>ejemplo 9</title>
         <meta charset="UTF-8">
+        <link href="CSS/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        <div style="text-align: center; width: 50%; margin: 0 auto;" id="encabezados">
+            <h1>Ejemplo 9</h1>
+        </div>
         <a href="ejemplo8.html">Back</a>
         <a href="index.html">Home</a>
         <a href="ejemplo2.html">Next</a><br>
         <h1>Registro de cliente</h1>
         <form action="#" method="POST">
             <label>Nombre</label>
-            <input placeholder="nombre" type="text" name="nombre" value="" size="20" />
+            <input placeholder="Digite su nombre" type="text" name="nombre" id="nombre"  value="" size="20" />
             <br>
             <label>Apellidos</label>
-            <input placeholder="apellidos" type="text" name="apellidos" value="" size="30" />
+            <input placeholder="Digite sus apellidos" type="text" name="apellidos" id="apellidos" value="" size="30" />
             <br>
             <label>Correo</label>
-            <input placeholder="correo@abc.com" type="email" name="correo" value="" size="15" />
+            <input placeholder="Digite su correo" type="email" name="correo" id="correo" value="" size="15" />
+            <br>
+            <label>Password</label>
+            <input placeholder="Digite su contraseña" type="password" name="password" id="pass" value="" size="15" />
             <br>
             <input type="submit" name="registrar" value="Registrar" />
         </form>
