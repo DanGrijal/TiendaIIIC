@@ -4,7 +4,6 @@
  */
 package com.Tienda;
 
-import com.Tienda.service.UsuarioService;
 import java.rmi.registry.Registry;
 import java.util.Locale;
 import org.springframework.context.MessageSource;
@@ -27,6 +26,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import static org.springframework.security.core.userdetails.User.builder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.Tienda.service.UsuarioDetailsService;
 
 /**
  *
