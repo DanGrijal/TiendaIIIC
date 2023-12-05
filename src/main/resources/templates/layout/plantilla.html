@@ -30,17 +30,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                             <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN')">
-                                <a class="nav-lin dropdown-toggle"
+                                <a class="nav-link dropdown-toggle"
                                    data-bs-toggle="dropdown"
                                    href="#"
                                    role="button"
                                    aria-expanded="false">[[#{plantilla.pruebas}]]</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li>
-                                        <a class="dropdpwn-item" th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a> 
+                                        <a class="dropdown-item" th:href="@{/pruebas/listado}">[[#{plantilla.asociaciones}]]</a> 
                                     </li>
                                     <li>
-                                        <a class="dropdpwn-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a> 
+                                        <a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a> 
                                     </li>
                                 </ul>
                             </li>
@@ -54,27 +54,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 </ul>
                             </li>
                         </ul>
-                        <ul class="navbar-bar" sec:authorize="!isAuthenticated()">
+                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item">
                                 <a href="@{/login}" class="nav-link">
-                                    <i class="fa fa-sign-in-alt"></i>
+                                    <i class="fas fa-sign-in-alt"></i>
                                 </a>
                             </li>
                         </ul>                        
-                        <ul class="navbar-bar" sec:authorize="isAuthenticated()">
+                        <ul class="navbar-var" sec:authorize="isAuthenticated()">
                             <li class="nav-item text-white my-auto" th:if="${#ctx.session.usuarioImagen != null}">
                                 <img th:src="${#ctx.session.usuarioImagen}" height="40"/>
                             </li>
                             <li class="nav-item text-white my-auto">
-                                    <i class="fa fa-user" mxs-1></i><span sec:authentication="name">Username</span>
+                                    <i class="fas fa-user" mxs-1></i><span sec:authentication="name">Username</span>
                             </li>
                             <li class="nav-item text-white my-auto">
-                                <i class="fa fa-users" mxs-1></i><span sec:authentication="principal.authorities">Roles</span>
+                                <i class="fas fa-users" mxs-1></i><span sec:authentication="principal.authorities">Roles</span>
                             </li>
                             <li class="nav-item text-white my-auto">
                                 <form method="POST" th:action="@{/logout}">
                                     <button class="btn btn-dark">
-                                        <i class="fa fa-sign-out-alt"></i>
+                                        <i class="fas fa-sign-out-alt"></i>
                                     </button>
                                 </form>
                             </li>
